@@ -75,3 +75,5 @@ function handler<T>(...operations) {
   next[observable] = () => source
   return next
 }
+
+export { handler, SourceType }
