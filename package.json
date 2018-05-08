@@ -1,0 +1,19 @@
+{
+  "name": "ng-handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^6.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^2.8.3"
+  }
+}
