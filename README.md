@@ -133,7 +133,7 @@ Invoking `handler` returns a function that can be observed. Thanks to RxJS v6, `
 
 ```js
 const myHandler = handler(map(message => message + "!"))
-from(myHandler).subscribe(message => console.log(message)) //logs "Hello1"
+from(myHandler).subscribe(message => console.log(message)) //logs "Hello!"
 myHandler("Hello")
 ```
 
