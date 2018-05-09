@@ -1,6 +1,6 @@
 {
-  "name": "ng-handler",
-  "version": "1.0.2",
+  "name": "rx-handler",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -8,11 +8,11 @@
     "build": "tsc",
     "dev": "tsc -w"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["RxJS"],
+  "author": "John Lindquist",
   "license": "ISC",
   "dependencies": {
-    "rxjs": "^6.1.0"
+    "rxjs": "^6.0.0"
   },
   "devDependencies": {
     "typescript": "^2.8.3"
