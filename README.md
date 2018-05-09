@@ -6,7 +6,17 @@ npm i rx-handler
 
 ## Hello World
 
-[Hello World Demo](https://stackblitz.com/edit/typescript-bw3o98?file=index.ts)
+[Hello World Demo](https://stackblitz.com/edit/js-htwrac?file=index.js)
+
+```js
+const myHandler = handler()
+from(myHandler).subscribe(message => console.log(message)) //logs "Hello"
+myHandler("Hello, world!")
+```
+
+## Handle a Click
+
+[Handle a Click Demo](https://stackblitz.com/edit/typescript-bw3o98?file=index.ts)
 
 ```js
 import { from } from "rxjs"
@@ -116,6 +126,24 @@ export class AppComponent {
   )
 }
 ```
+
+### Description
+
+Invoking `handler` returns a function that can be observed. Thanks to RxJS v6, `handler` also accepts operators just like `.pipe()`.
+
+```js
+const myHandler = handler(map(message => message + "!"))
+from(myHandler).subscribe(message => console.log(message)) //logs "Hello1"
+myHandler("Hello")
+```
+
+### Why?
+
+Handlers are a core concept of JavaScript, but were impossible in RxJS until I got this PR accepted: _[Allow Functions in RxJS PR](https://github.com/ReactiveX/rxjs/pull/3562)_
+
+Creating `Subjects` to handle events for Angular templates (or any other frameworks) was a huge pain. It never felt quite right to pass a `Subject` into an event handler an invoke `next` to push values into a stream. I've always wanted to simply "pass a handler" to events, but still use streams.
+
+`rx-handler` enables you to pass handlers to events along with the bonus of accepting operators thanks to the new RxJS v6 architecture.
 
 ### Special Thanks to [Nicholas Jamieson](https://github.com/cartant)
 
