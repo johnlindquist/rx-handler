@@ -141,7 +141,7 @@ myHandler("Hello")
 
 Handlers are a core concept of JavaScript, but were impossible in RxJS until I got this PR accepted: _[Allow Functions in RxJS PR](https://github.com/ReactiveX/rxjs/pull/3562)_
 
-Creating `Subjects` to handle events for Angular templates (or any other frameworks) was a huge pain. It never felt quite right to pass a `Subject` into an event handler an invoke `next` to push values into a stream. I've always wanted to simply "pass a handler" to events, but still use streams.
+Creating `Subjects` to handle events for Angular templates (or any other frameworks) was a huge pain. It never felt quite right to pass a `Subject` into an event handler and invoke `next` to push values into a stream. I've always wanted to simply "pass a handler" to events, but still use streams.
 
 `rx-handler` enables you to pass handlers to events along with the bonus of accepting operators thanks to the new RxJS v6 architecture.
 
